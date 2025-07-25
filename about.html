@@ -75,49 +75,259 @@
                 </div>
             </div>
 
-            <div class="about-card">
-                <h2><i class="fas fa-user-graduate"></i> Who Can Participate?</h2>
-                <ul class="participation-list">
-                    <li><i class="fas fa-check-circle"></i> Undergraduate and postgraduate students</li>
-                    <li><i class="fas fa-check-circle"></i> Teams of 2 members from the same institution</li>
-                    <li><i class="fas fa-check-circle"></i> Students from CS, DS, AI/ML domains</li>
-                    <li><i class="fas fa-check-circle"></i> Open to participants from other colleges</li>
-                </ul>
-            </div>
+            <div class="about-section dark-theme">
+    <div class="about-card glow-card">
+        <div class="card-header">
+            <i class="fas fa-user-graduate pulse-icon"></i>
+            <h2>Who Can Participate?</h2>
+        </div>
+        <ul class="participation-list">
+            <li>
+                <div class="list-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Undergraduate and postgraduate students</span>
+                </div>
+                <div class="hover-detail">Open to all years of study</div>
+            </li>
+            <li>
+                <div class="list-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Teams of 2 members from the same institution</span>
+                </div>
+                <div class="hover-detail">Cross-disciplinary teams allowed</div>
+            </li>
+            <li>
+                <div class="list-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Students from CS, DS, AI/ML domains</span>
+                </div>
+                <div class="hover-detail">Related disciplines welcome</div>
+            </li>
+            <li>
+                <div class="list-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Open to participants from other colleges</span>
+                </div>
+                <div class="hover-detail">Inter-college competition</div>
+            </li>
+        </ul>
+    </div>
 
-            <div class="about-card">
-                <h2><i class="fas fa-calendar-alt"></i> Event Details</h2>
-                <div class="details-grid">
-                    <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Venue</h3>
-                            <p>Jubilee Building Labs & LS Hall<br>Your College Name</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Date & Time</h3>
-                            <p>September 3, 2025<br>8:00 AM - 5:30 PM</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-users"></i>
-                        <div>
-                            <h3>Team Size</h3>
-                            <p>2 members per team</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-file-alt"></i>
-                        <div>
-                            <h3>Registration</h3>
-                            <p>Free participation<br>Certificates for all</p>
-                        </div>
-                    </div>
+    <div class="about-card glow-card">
+        <div class="card-header">
+            <i class="fas fa-calendar-alt pulse-icon"></i>
+            <h2>Event Details</h2>
+        </div>
+        <div class="details-grid">
+            <div class="detail-item hover-zoom">
+                <div class="detail-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="detail-content">
+                    <h3>Venue</h3>
+                    <p>Jubilee Building Labs & LS Hall</p>
+                    <p class="highlight">Loyola College Chennai</p>
                 </div>
             </div>
+            <div class="detail-item hover-zoom">
+                <div class="detail-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="detail-content">
+                    <h3>Date & Time</h3>    
+                    <p>September 3, 2025</p>
+                    <p class="highlight">8:00 AM - 5:30 PM</p>
+                </div>
+            </div>
+            <div class="detail-item hover-zoom">
+                <div class="detail-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="detail-content">
+                    <h3>Team Size</h3>
+                    <p>2 members per team</p>
+                    <p class="highlight">Register together</p>
+                </div>
+            </div>
+            <div class="detail-item hover-zoom">
+                <div class="detail-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="detail-content">
+                    <h3>Registration</h3>
+                    <p>Free participation</p>
+                    <p class="highlight">Certificates for all</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.dark-theme {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --highlight-color: #3700b3;
+    --hover-color: #282828;
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.glow-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    min-width: 300px;
+}
+
+.glow-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(187, 134, 252, 0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--highlight-color);
+    padding-bottom: 15px;
+}
+
+.card-header i {
+    font-size: 28px;
+    margin-right: 15px;
+    color: var(--accent-color);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+.participation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.participation-list li {
+    position: relative;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+    transition: all 0.3s;
+}
+
+.participation-list li:hover {
+    background-color: var(--hover-color);
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+}
+
+.participation-list i {
+    color: var(--secondary-color);
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.hover-detail {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 14px;
+    color: var(--secondary-color);
+    transition: max-height 0.3s, padding 0.3s;
+    padding-left: 30px;
+}
+
+.participation-list li:hover .hover-detail {
+    max-height: 50px;
+    padding: 5px 0 5px 30px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.detail-item {
+    background: linear-gradient(145deg, #252525, #1e1e1e);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s;
+    border-left: 3px solid var(--accent-color);
+}
+
+.hover-zoom:hover {
+    transform: scale(1.03);
+    background: linear-gradient(145deg, #2a2a2a, #232323);
+}
+
+.detail-icon {
+    font-size: 24px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.detail-content h3 {
+    margin: 0 0 10px 0;
+    color: var(--accent-color);
+    font-size: 18px;
+}
+
+.detail-content p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.highlight {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.pulse-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-section {
+        padding: 20px 15px;
+    }
+    
+    .glow-card {
+        min-width: 100%;
+    }
+}
+</style>
         </div>
     </section>
 
