@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CodeVerse Symposium</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for registration page */
+        .registration-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #2a2a3a;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .registration-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .registration-header h2 {
+            color: #6c63ff;
+            margin-bottom: 10px;
+        }
+        
+        .registration-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .registration-steps:before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #444;
+            z-index: 1;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #444;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-weight: bold;
+        }
+        
+        .step.active .step-number {
+            background-color: #6c63ff;
+        }
+        
+        .step.completed .step-number {
+            background-color: #4caf50;
+        }
+        
+        .step-text {
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        
+        .step.active .step-text {
+            color: #fff;
+        }
+        
+        .registration-form {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ddd;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #3a3a4a;
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #6c63ff;
+        }
+        
+        .team-members {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .team-member {
+            flex: 1;
+        }
+        
+        .gform-embed {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .gform-btn {
+            display: inline-block;
+            background-color: #6c63ff;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        
+        .gform-btn:hover {
+            background-color: #5a52d6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+        }
+        
+        .gform-btn i {
+            margin-left: 8px;
+        }
+        
+        .registration-note {
+            background-color: rgba(108, 99, 255, 0.1);
+            border-left: 4px solid #6c63ff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .team-members {
+                flex-direction: column;
+            }
+            
+            .registration-steps {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .registration-steps:before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="code"></span>CodeVerse<span class="code"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="rounds.html">Rounds</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="register-btn"><a href="#" class="active">Register Now</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Register Your Team</h1>
+            <p>Join CodeVerse 2025 - Inter-College Technical Symposium</p>
+        </div>
+    </section>
+
+    <!-- Registration Process -->
+    <section class="registration-process">
+        <div class="container">
+            <div class="registration-container">
+                <div class="registration-header">
+                    <h2>Team Registration</h2>
+                    <p>Follow these simple steps to register for CodeVerse 2025</p>
+                </div>
+                
+                <div class="registration-steps">
+                    <div class="step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Review Rules</div>
+                    </div>
+                    <div class="step active">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Team Details</div>
+                    </div>
+                    <!-- <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Confirmation</div>
+                    </div> -->
+                </div>
+                
+                <div class="registration-note">
+                    <h3><i class="fas fa-info-circle"></i> Important Information</h3>
+                    <ul>
+                        <li>Registration is free for all participants</li>
+                        <li>Each team must consist of exactly 2 members from the same institution</li>
+                        <li>All participants must be undergraduate or postgraduate students</li>
+                        <li>Registration deadline: August 25, 2025</li>
+                    </ul>
+                </div>
+                
+                <!-- Registration Form -->
+                <!-- <div class="registration-form">
+                    <h3><i class="fas fa-users"></i> Team Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="team-name">Team Name *</label>
+                        <input type="text" id="team-name" placeholder="Enter your team name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="college">College/University *</label>
+                        <input type="text" id="college" placeholder="Enter your institution name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Team Members *</label>
+                        <div class="team-members">
+                            <div class="team-member">
+                                <input type="text" placeholder="Member 1 Name" required>
+                                <input type="email" placeholder="Member 1 Email" required style="margin-top: 10px;">
+                                <input type="tel" placeholder="Member 1 Phone" required style="margin-top: 10px;">
+                            </div>
+                            <div class="team-member">
+                                <input type="text" placeholder="Member 2 Name" required>
+                                <input type="email" placeholder="Member 2 Email" required style="margin-top: 10px;">
+                                <input type="tel" placeholder="Member 2 Phone" required style="margin-top: 10px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required>
+                            <option value="">Select Department</option>
+                            <option value="CS">Computer Science</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="DS">Data Science</option>
+                            <option value="AI">Artificial Intelligence</option>
+                            <option value="ML">Machine Learning</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="year">Year of Study *</label>
+                        <select id="year" required>
+                            <option value="">Select Year</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                            <option value="5">5th Year</option>
+                            <option value="PG">Post Graduate</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="agree-terms" required>
+                        <label for="agree-terms" style="display: inline; margin-left: 8px;">I have read and agree to the <a href="rules.html" target="_blank">rules and regulations</a> of CodeVerse 2025 *</label>
+                    </div> -->
+                    
+                    <div class="gform-embed">
+                        <p>Complete your registration by filling out our Google Form</p>
+                        <a href="https://forms.gle/iTVqMU1kA9GNKsqVA" class="gform-btn" target="_blank">
+                            Proceed to Google Form <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <p class="form-note" style="margin-top: 15px; font-size: 0.9em; color: #aaa;">
+                            <i class="fas fa-lock"></i> Your information is secure and will only be used for event purposes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Have Questions?</h2>
+            <p>Contact us if you need any assistance with registration</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="code"></span>CodeVerse<span class="code"></span>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="rounds.html">Rounds</a></li>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> parthishwaran050606@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9962461107</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeVerse Symposium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const gformBtn = document.querySelector('.gform-btn');
+            
+            gformBtn.addEventListener('click', function(e) {
+                const requiredFields = document.querySelectorAll('input[required], select[required]');
+                let allValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value) {
+                        field.style.borderColor = '#ff6b6b';
+                        allValid = false;
+                    } else {
+                        field.style.borderColor = '#444';
+                    }
+                });
+                
+                const agreeTerms = document.getElementById('agree-terms');
+                if (!agreeTerms.checked) {
+                    agreeTerms.parentElement.style.color = '#ff6b6b';
+                    allValid = false;
+                } else {
+                    agreeTerms.parentElement.style.color = '';
+                }
+                
+                if (!allValid) {
+                    e.preventDefault();
+                    alert('Please fill in all required fields and agree to the terms.');
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

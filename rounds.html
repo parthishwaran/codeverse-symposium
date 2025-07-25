@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Rounds - CodeVerse Symposium</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="code"></span>CodeVerse<span class="code"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="#" class="active">Rounds</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="register-btn"><a href="register.html">Register Now</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Rounds Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Competition Rounds</h1>
+            <p>Detailed breakdown of all technical challenges</p>
+        </div>
+    </section>
+
+    <!-- Round Navigation -->
+    <section class="round-nav">
+        <div class="container">
+            <div class="round-tabs">
+                <a href="#round1" class="round-tab active">
+                    <i class="fas fa-bolt"></i>
+                    <span>Round 1</span>
+                </a>
+                <a href="#round2" class="round-tab">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Round 2</span>
+                </a>
+                <a href="#round3" class="round-tab">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Round 3</span>
+                </a>
+                <a href="#round4" class="round-tab">
+                    <i class="fas fa-server"></i>
+                    <span>Round 4</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Round 1 Details -->
+    <section class="competition-rounds">
+    <!-- Round 1 -->
+    <div id="round1" class="round-card">
+        <div class="round-header">
+            <div class="round-icon" style="background-color: #4CAF50;">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <div class="round-title">
+                <h2>Round 1: Speed Code Sprint</h2>
+                <div class="round-meta">
+                    <span class="time"><i class="far fa-clock"></i> 10:00 AM - 11:15 AM (75 mins)</span>
+                    <span class="points"><i class="fas fa-star"></i> Max 35 points</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="round-content">
+            <div class="content-section">
+                <h3><i class="fas fa-question-circle"></i> Description</h3>
+                <p>Teams solve coding problems quickly and accurately. Question papers will contain problem statements with expected syntax and outputs.</p>
+                
+                <div class="difficulty-levels">
+                    <div class="level">
+                        <span class="tag easy">Easy</span>
+                        <p>Basic programming concepts (string manipulation, simple algorithms)</p>
+                    </div>
+                    <div class="level">
+                        <span class="tag medium">Medium</span>
+                        <p>Array operations and intermediate data structure problems</p>
+                    </div>
+                    <div class="level">
+                        <span class="tag hard">Hard</span>
+                        <p>Graph algorithms and complex logical problems</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-star"></i> Scoring</h3>
+                <ul class="scoring-list">
+                    <li><strong>10 points</strong> per correct solution</li>
+                    <li><strong>+5 bonus points</strong> for top 5 fastest teams</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-gavel"></i> Rules</h3>
+                <ul class="rules-list">
+                    <li>Languages: Python, Java, C++, C</li>
+                    <li>Submit executable code files</li>
+                    <li>No internet access</li>
+                    <li>No external communication</li>
+                    <li>Language specification sheets allowed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Round 2 -->
+    <div id="round2" class="round-card">
+        <div class="round-header">
+            <div class="round-icon" style="background-color: #2196F3;">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="round-title">
+                <h2>Round 2: Algorithm Design Challenge</h2>
+                <div class="round-meta">
+                    <span class="time"><i class="far fa-clock"></i> 11:30 AM - 1:00 PM (90 mins)</span>
+                    <span class="points"><i class="fas fa-star"></i> Max 30 points</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="round-content">
+            <div class="content-section">
+                <h3><i class="fas fa-question-circle"></i> Description</h3>
+                <p>Teams solve one complex problem involving algorithm design and implementation.</p>
+                <p>Example problem types:</p>
+                <ul>
+                    <li>Shortest path algorithms</li>
+                    <li>Scheduling optimization</li>
+                    <li>Text pre-processing</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-star"></i> Scoring</h3>
+                <ul class="scoring-list">
+                    <li><strong>10 points</strong> Correctness (passes test cases)</li>
+                    <li><strong>10 points</strong> Algorithm efficiency</li>
+                    <li><strong>10 points</strong> Clarity of explanation</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-gavel"></i> Rules</h3>
+                <ul class="rules-list">
+                    <li>Document algorithm design (pseudocode/flowchart)</li>
+                    <li>5-7 minute presentation to judges</li>
+                    <li>No external resources</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Round 3 -->
+    <div id="round3" class="round-card">
+        <div class="round-header">
+            <div class="round-icon" style="background-color: #FFC107;">
+                <i class="fas fa-puzzle-piece"></i>
+            </div>
+            <div class="round-title">
+                <h2>Round 3: Technical Connection</h2>
+                <div class="round-meta">
+                    <span class="time"><i class="far fa-clock"></i> 2:00 PM - 2:30 PM (30 mins)</span>
+                    <span class="points"><i class="fas fa-star"></i> Max 60 points</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="round-content">
+            <div class="content-section">
+                <h3><i class="fas fa-question-circle"></i> Description</h3>
+                <p>A fun, fast-paced technical quiz with visual challenges.</p>
+                <p>Example questions:</p>
+                <ul>
+                    <li>Identify programming languages from code snippets</li>
+                    <li>Name tech personalities from photos</li>
+                    <li>Solve visual logic puzzles</li>
+                    <li>Recognize algorithms from diagrams</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-star"></i> Scoring</h3>
+                <ul class="scoring-list">
+                    <li><strong>3 points</strong> per correct answer</li>
+                    <li><strong>20 questions</strong> total</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-gavel"></i> Rules</h3>
+                <ul class="rules-list">
+                    <li>No electronic devices</li>
+                    <li>No team discussions</li>
+                    <li>Write answers on provided sheets</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Round 4 -->
+    <div id="round4" class="round-card">
+        <div class="round-header">
+            <div class="round-icon" style="background-color: #9C27B0;">
+                <i class="fas fa-server"></i>
+            </div>
+            <div class="round-title">
+                <h2>Round 4: System Design Showdown</h2>
+                <div class="round-meta">
+                    <span class="time"><i class="far fa-clock"></i> 2:35 PM - 4:20 PM (1h 45m)</span>
+                    <span class="points"><i class="fas fa-star"></i> Max 70 points</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="round-content">
+            <div class="content-section">
+                <h3><i class="fas fa-question-circle"></i> Description</h3>
+                <p>Teams design the architecture for a complex system or application.</p>
+                <p>Example challenges:</p>
+                <ul>
+                    <li>Ride-sharing app like Uber</li>
+                    <li>Real-time collaborative code editor</li>
+                    <li>Food delivery tracking system</li>
+                    <li>AI-based exam proctoring system</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-star"></i> Scoring</h3>
+                <ul class="scoring-list">
+                    <li><strong>40 points</strong> Design feasibility</li>
+                    <li><strong>20 points</strong> Scalability</li>
+                    <li><strong>10 points</strong> Presentation clarity</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-gavel"></i> Rules</h3>
+                <ul class="rules-list">
+                    <li>Use provided tools (whiteboards/digital)</li>
+                    <li>5 minute presentation to judges</li>
+                    <li>Focus on design, not implementation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Winner Selection -->
+    <div id="winner-selection" class="round-card">
+        <div class="round-header">
+            <div class="round-icon" style="background-color: #FF5722;">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="round-title">
+                <h2>Winner Selection</h2>
+            </div>
+        </div>
+        
+        <div class="round-content">
+            <div class="content-section">
+                <h3><i class="fas fa-medal"></i> Total Points</h3>
+                <div class="points-breakdown">
+                    <div class="points-item">
+                        <span class="points-value">35</span>
+                        <span class="points-label">Round 1</span>
+                    </div>
+                    <div class="points-item">
+                        <span class="points-value">30</span>
+                        <span class="points-label">Round 2</span>
+                    </div>
+                    <div class="points-item">
+                        <span class="points-value">60</span>
+                        <span class="points-label">Round 3</span>
+                    </div>
+                    <div class="points-item">
+                        <span class="points-value">70</span>
+                        <span class="points-label">Round 4</span>
+                    </div>
+                    <div class="points-total">
+                        <span class="points-value">195</span>
+                        <span class="points-label">Total Possible</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3><i class="fas fa-random"></i> Tie-Breaking Rules</h3>
+                <ol class="tiebreaker-list">
+                    <center><li>Higher score in Round 4 (System Design)</li>
+                    <li>Higher score in Round 2 (Algorithm Design)</li>
+                    <li>Earlier submission in Round 1 (Speed Code)</li></center>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .competition-rounds {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .round-card {
+        background: rgb(42, 35, 70);
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+    
+    .round-header {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background: linear-gradient(to right, #7c96af, rgb(199, 162, 162));
+    }
+    
+    .round-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        color: white;
+        font-size: 24px;
+    }
+    
+    .round-title h2 {
+        margin: 0;
+        color: #333;
+    }
+    
+    .round-meta {
+        display: flex;
+        gap: 15px;
+        margin-top: 8px;
+        font-size: 14px;
+        color: #a12424;
+    }
+    
+    .round-meta i {
+        margin-right: 5px;
+    }
+    
+    .round-content {
+        padding: 0 20px 20px;
+    }
+    
+    .content-section {
+        margin-bottom: 25px;
+    }
+    
+    .content-section h3 {
+        color: #1b02fa;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .content-section h3 i {
+        margin-right: 10px;
+    }
+    
+    .difficulty-levels {
+        margin-top: 15px;
+    }
+    
+    .level {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .tag {
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 13px;
+        min-width: 70px;
+        text-align: center;
+        margin-right: 15px;
+    }
+    
+    .easy { background: #e8f5e9; color: #2e7d32; }
+    .medium { background: #fff8e1; color: #ff8f00; }
+    .hard { background: #ffebee; color: #c62828; }
+    
+    .scoring-list, .rules-list {
+        padding-left: 5px;
+        list-style: none;
+    }
+    
+    .scoring-list li, .rules-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #3d1686;
+    }
+    
+    .scoring-list li:last-child, .rules-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .points-breakdown {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .points-item {
+        background: #0a555a;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        flex: 1;
+        min-width: 80px;
+    }
+    
+    .points-total {
+        background: #333;
+        color: white;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        flex: 1;
+        min-width: 80px;
+    }
+    
+    .points-value {
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .points-label {
+        font-size: 13px;
+        opacity: 0.9;
+    }
+    
+    .tiebreaker-list {
+        padding-left: 20px;
+    }
+    
+    .tiebreaker-list li {
+        padding: 8px 0;
+    }
+    
+    @media (max-width: 768px) {
+        .round-header {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .round-icon {
+            margin: 0 auto 15px;
+        }
+        
+        .round-meta {
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .level {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .tag {
+            margin-bottom: 8px;
+        }
+        
+        .points-breakdown {
+            flex-direction: column;
+        }
+    }
+</style>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Compete?</h2>
+            <p>Register your team now for this exciting technical challenge</p>
+            <a href="register.html" class="btn">Register Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="code"></span>CodeVerse<span class="code"></span>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="rounds.html">Rounds</a></li>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> parthishwaran050606@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9962461107</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeVerse Symposium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/rounds.js"></script>
+</body>
+</html>

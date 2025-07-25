@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - CodeVerse Symposium</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /* Schedule Section Styles */
+    .detailed-schedule {
+        padding: 40px 0;
+    }
+
+    .schedule-notice {
+        background: rgba(108, 99, 255, 0.1);
+        border-left: 4px solid #6c63ff;
+        padding: 15px;
+        margin-bottom: 30px;
+        border-radius: 0 5px 5px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .schedule-notice i {
+        color: #6c63ff;
+    }
+
+    .schedule-day h2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .time-slot h3 {
+        color: #fff;
+        margin: 25px 0 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #444;
+    }
+
+    .schedule-item {
+        background: #2a2a3a;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .schedule-item.highlight {
+        border-left: 4px solid #6c63ff;
+        background: linear-gradient(90deg, rgba(108, 99, 255, 0.1) 0%, #2a2a3a 100%);
+    }
+
+    .schedule-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .time {
+        font-weight: 600;
+        color: #6c63ff;
+        margin-bottom: 8px;
+    }
+
+    .event-details h4 {
+        color: #fff;
+        margin-bottom: 8px;
+    }
+
+    .venue {
+        color: #aaa;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .venue i {
+        color: #6c63ff;
+    }
+
+    .round-details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: #1e1e2e;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .round-details.active {
+        max-height: 300px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .round-details p {
+        margin: 8px 0;
+        color: #ddd;
+    }
+
+    .round-details strong {
+        color: #6c63ff;
+    }
+
+    .toggle-details {
+        background: none;
+        border: none;
+        color: #6c63ff;
+        cursor: pointer;
+        padding: 5px 0;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .toggle-details i {
+        transition: transform 0.3s ease;
+    }
+
+    .toggle-details.active i {
+        transform: rotate(180deg);
+    }
+
+    .event-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: rgba(108, 99, 255, 0.2);
+        font-size: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .schedule-item:hover .event-icon {
+        color: rgba(108, 99, 255, 0.4);
+    }
+
+    /* Time slot specific icons */
+    .schedule-item[data-round="1"] .event-icon { content: "\f0e7"; } /* bolt */
+    .schedule-item[data-round="2"] .event-icon { content: "\f542"; } /* flowchart */
+    .schedule-item[data-round="3"] .event-icon { content: "\f12e"; } /* puzzle-piece */
+    .schedule-item[data-round="4"] .event-icon { content: "\f233"; } /* server */
+</style>
+
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="code"></span>CodeVerse<span class="code"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#" class="active">Schedule</a></li>
+                    <li><a href="rounds.html">Rounds</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="register-btn"><a href="register.html">Register Now</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Schedule Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Event Schedule</h1>
+            <p>Detailed timeline of CodeVerse Symposium</p>
+        </div>
+    </section>
+
+    <!-- Updated Schedule HTML -->
+<section class="detailed-schedule">
+    <div class="container">
+        <div class="schedule-notice">
+            <i class="fas fa-info-circle"></i>
+            <p>All times are in IST. Schedule is subject to minor changes.</p>
+            
+        </div>
+
+        <div class="schedule-day">
+            <h2><i class="fas fa-calendar-day"></i> September 3, 2025</h2>
+            
+            <div class="time-slot morning">
+                <h3><i class="fas fa-sun"></i> Morning Session</h3>
+                
+                <!-- Registration -->
+                <div class="schedule-item" data-category="logistics">
+                    <div class="time">8:00 AM - 8:50 AM</div>
+                    <div class="event-details">
+                        <h4>Registration & Welcome</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Near Dinosaur Building</p>
+                        <p>Check-in, collect participant kits, and light refreshments</p>
+                    </div>
+                    <i class="fas fa-user-plus event-icon"></i>
+                </div>
+                
+                <!-- Assemble in Lab -->
+                <div class="schedule-item" data-category="logistics">
+                    <div class="time">9:00 AM - 9:30 AM</div>
+                    <div class="event-details">
+                        <h4>Assemble in Lab</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Jubilee Building 3rd floor</p>
+                        <p>Participants gather in assigned labs for initial briefing</p>
+                    </div>
+                    <i class="fas fa-laptop-code event-icon"></i>
+                </div>
+                
+                <!-- Event Briefing -->
+                <div class="schedule-item" data-category="logistics">
+                    <div class="time">9:30 AM - 9:45 AM</div>
+                    <div class="event-details">
+                        <h4>Event Briefing</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Lab</p>
+                        <p>Detailed explanation of event rules and schedule</p>
+                    </div>
+                    <i class="fas fa-chalkboard-teacher event-icon"></i>
+                </div>
+                
+                <!-- Round 1 -->
+                <div class="schedule-item highlight" data-round="1" data-category="competition">
+                    <div class="time">10:00 AM - 11:15 AM</div>
+                    <div class="event-details">
+                        <h4>Round 1: Speed Code Sprint</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Lab</p>
+                        <p>60 minutes coding + 15 minutes evaluation</p>
+                        <button class="toggle-details">
+                            View Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="round-details">
+                            <p><strong>Format:</strong> Solve 3 coding problems (Easy, Medium, Hard)</p>
+                            <p><strong>Skills Tested:</strong> Quick thinking, syntax accuracy, problem-solving</p>
+                            <p><strong>Points:</strong> 30 base + 5 bonus for early completion</p>
+                            <button class="action-btn">
+                                <i class="fas fa-book"></i> Preparation Tips
+                            </button>
+                        </div>
+                    </div>
+                    <i class="fas fa-bolt event-icon"></i>
+                </div>
+                
+                <!-- Round 2 -->
+                <div class="schedule-item highlight" data-round="2" data-category="competition">
+                    <div class="time">11:30 AM - 1:00 PM</div>
+                    <div class="event-details">
+                        <h4>Round 2: Algorithm Design Challenge</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Lab</p>
+                        <p>90 minutes design and implementation</p>
+                        <button class="toggle-details">
+                            View Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="round-details">
+                            <p><strong>Format:</strong> Design and implement an algorithm for a complex problem</p>
+                            <p><strong>Skills Tested:</strong> Algorithm design, efficiency, explanation</p>
+                            <p><strong>Points:</strong> 30 total (10 correctness, 10 efficiency, 10 explanation)</p>
+                            <button class="action-btn">
+                                <i class="fas fa-book"></i> Preparation Tips
+                            </button>
+                        </div>
+                    </div>
+                    <i class="fas fa-project-diagram event-icon"></i>
+                </div>
+            </div>
+            
+            <div class="time-slot afternoon">
+                <h3><i class="fas fa-moon"></i> Afternoon Session</h3>
+                
+                <!-- Lunch -->
+                <div class="schedule-item" data-category="break">
+                    <div class="time">1:00 PM - 1:50 PM</div>
+                    <div class="event-details">
+                        <h4>Lunch Break</h4>
+                        <p>Refreshments will be served</p>
+                    </div>
+                    <i class="fas fa-utensils event-icon"></i>
+                </div>
+                
+                <!-- Round 3 -->
+                <div class="schedule-item highlight" data-round="3" data-category="competition">
+                    <div class="time">2:00 PM - 2:30 PM</div>
+                    <div class="event-details">
+                        <h4>Round 3: Technical Connection</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Lab</p>
+                        <p>30 minutes fun technical quiz</p>
+                        <button class="toggle-details">
+                            View Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="round-details">
+                            <p><strong>Format:</strong> Image-based technical quiz</p>
+                            <p><strong>Skills Tested:</strong> Tech knowledge, quick thinking</p>
+                            <p><strong>Points:</strong> 60 total (3 per correct answer, 20 questions)</p>
+                            <button class="action-btn">
+                                <i class="fas fa-book"></i> Preparation Tips
+                            </button>
+                        </div>
+                    </div>
+                    <i class="fas fa-puzzle-piece event-icon"></i>
+                </div>
+                
+                <!-- Round 4 -->
+                <div class="schedule-item highlight" data-round="4" data-category="competition">
+                    <div class="time">2:35 PM - 4:20 PM</div>
+                    <div class="event-details">
+                        <h4>Round 4: System Design Showdown</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Lab</p>
+                        <p>1 hour 45 minutes design + presentation</p>
+                        <button class="toggle-details">
+                            View Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="round-details">
+                            <p><strong>Format:</strong> Design a system architecture and present it</p>
+                            <p><strong>Skills Tested:</strong> System design, scalability, presentation</p>
+                            <p><strong>Points:</strong> 70 total (40 feasibility, 20 scalability, 10 clarity)</p>
+                            <button class="action-btn">
+                                <i class="fas fa-book"></i> Preparation Tips
+                            </button>
+                        </div>
+                    </div>
+                    <i class="fas fa-server event-icon"></i>
+                </div>
+                
+                <!-- Judging -->
+                <div class="schedule-item" data-category="logistics">
+                    <div class="time">4:20 PM - 4:50 PM</div>
+                    <div class="event-details">
+                        <h4>Judging & Score Compilation</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> Lab</p>
+                        <p>Judges evaluate final submissions</p>
+                    </div>
+                    <i class="fas fa-clipboard-check event-icon"></i>
+                </div>
+                
+                <!-- Valedictory -->
+                <div class="schedule-item" data-category="ceremony">
+                    <div class="time">5:00 PM - 5:30 PM</div>
+                    <div class="event-details">
+                        <h4>Valedictory & Prize Distribution</h4>
+                        <p class="venue"><i class="fas fa-map-marker-alt"></i> LS Hall</p>
+                        <p>Closing ceremony and announcement of winners</p>
+                    </div>
+                    <i class="fas fa-award event-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+
+    <!-- Add this JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle round details
+    const toggleButtons = document.querySelectorAll('.toggle-details');
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const details = this.nextElementSibling;
+            details.classList.toggle('active');
+            
+            // Change icon and text
+            if (this.classList.contains('active')) {
+                this.innerHTML = 'Hide Details <i class="fas fa-chevron-up"></i>';
+            } else {
+                this.innerHTML = 'View Details <i class="fas fa-chevron-down"></i>';
+            }
+        });
+    });
+
+    // Preparation tips buttons
+    const actionButtons = document.querySelectorAll('.action-btn');
+    actionButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const round = this.closest('.schedule-item').getAttribute('data-round');
+            alert(`Preparation tips for Round ${round} will be displayed here.\nThis could link to a detailed preparation guide.`);
+        });
+    });
+
+    // Download schedule button
+    const downloadBtn = document.querySelector('.download-schedule');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+            // In a real implementation, this would download a PDF
+            alert('Downloading schedule PDF...\nThis would trigger a file download in production.');
+        });
+    }
+
+    // Add hover effects to schedule items
+    const scheduleItems = document.querySelectorAll('.schedule-item');
+    scheduleItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+        });
+    });
+
+    // Filter functionality (example - would need more complete implementation)
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            scheduleItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Update active state on buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+</script>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Plan Your Participation</h2>
+            <p>Review the schedule and prepare for the competition</p>
+            <a href="register.html" class="btn">Register Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="code"></span>CodeVerse<span class="code"></span>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="rounds.html">Rounds</a></li>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> parthishwaran050606@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9962461107</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeVerse Symposium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
